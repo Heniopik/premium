@@ -15,20 +15,18 @@ date
 
 mkdir -p /etc/trojan/
 touch /etc/trojan/akun.conf
-# install xray
-wget https://raw.githubusercontent.com/Heniopik/premium/main/go.sh && chmod +x go.sh && ./go.sh
-rm -f /root/go.sh
+# install trojan
 bash -c "$(wget -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
 
 cd /root/
 wget https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
 bash acme.sh --install >/dev/null 2>&1
-bash acme.sh --register-account -m anuybazoelk639@gmail.com
-wget https://get.acme.sh >/dev/null 2>&1 | sh -s email=anuybazoelk639@gmail.com
+bash acme.sh --register-account -m cindyherdiana22@gmail.com
+wget https://get.acme.sh >/dev/null 2>&1 | sh -s email=cindyherdiana22@gmail.com
 /root/.acme.sh/acme.sh --upgrade --auto-upgrade >/dev/null 2>&1
 /root/.acme.sh/acme.sh --set-default-ca --server letsencrypt >/dev/null 2>&1
 /root/.acme.sh/acme.sh --issue -d $domain --standalone --force --keylength ec-256
-/root/.acme.sh/acme.sh --installcert -d $domain --ecc --fullchainpath /etc/vray/xray.crt --keypath /etc/xray/xray.key
+/root/.acme.sh/acme.sh --installcert -d $domain --ecc --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key
 
 uuid=$(cat /proc/sys/kernel/random/uuid)
 cat <<EOF > /etc/trojan/config.json
@@ -123,4 +121,4 @@ chmod +x renew-tr
 chmod +x certxray
 cd
 rm -f ins-vt.sh
-mv /root/domain /etc/xray
+mv /root/domain /etc/v2ray
