@@ -8,7 +8,7 @@ clear
 echo start
 sleep 0.5
 source /var/lib/premium-script/ipvps.conf
-domain="$(cat /etc/xray/domain)"
+domain="$(cat /etc/v2ray/domain)"
 sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
 
 cd /root/
@@ -19,7 +19,7 @@ wget https://get.acme.sh >/dev/null 2>&1 | sh -s email=cindyherdiana22@gmail.com
 /root/.acme.sh/acme.sh --upgrade --auto-upgrade >/dev/null 2>&1
 /root/.acme.sh/acme.sh --set-default-ca --server letsencrypt >/dev/null 2>&1
 /root/.acme.sh/acme.sh --issue -d $domain --standalone --force --keylength ec-256
-/root/.acme.sh/acme.sh --installcert -d $domain --ecc --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
+/root/.acme.sh/acme.sh --installcert -d $domain --ecc --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key
 /etc/init.d/ssh restart
 /etc/init.d/dropbear restart
 /etc/init.d/stunnel4 restart
