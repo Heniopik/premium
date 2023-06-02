@@ -61,7 +61,7 @@ echo "   - OpenVPN                 : TCP 1194, UDP 2200, SSL 442"  | tee -a log-
 echo "   - Stunnel4                   : 222, 777"  | tee -a log-install.txt
 echo "   - Dropbear                  : 109, 143"  | tee -a log-install.txt
 echo "   - Squid Proxy              : 3128, 8000 (limit to IP Server)"  | tee -a log-install.txt
-echo "   - Badvpn                    : 7100, 7200, 7300, 7400, 7500, 7600, 7700, 7800, 7900"  | tee -a log-install.txt
+echo "   - Badvpn                    : 7100, 7200, 7300"  | tee -a log-install.txt
 echo "   - Nginx                        : 81"  | tee -a log-install.txt
 echo "   - Trojan                        : 2087"  | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
