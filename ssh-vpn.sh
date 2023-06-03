@@ -282,6 +282,8 @@ wget -O trj "https://raw.githubusercontent.com/Heniopik/premium/main/trj.sh"
 wget -O updatee "https://raw.githubusercontent.com/Heniopik/premium/main/updatee.sh"
 wget -O bbr "https://raw.githubusercontent.com/Heniopik/premium/main/bbr.sh"
 wget -O running "https://raw.githubusercontent.com/Heniopik/premium/main/running.sh"
+wget -O crtxray "https://raw.githubusercontent.com/Heniopik/premium/main/cert.sh"
+chmod +x crtxray
 chmod +x add-host
 chmod +x menu
 chmod +x usernew
