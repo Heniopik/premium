@@ -9,7 +9,7 @@ exit 1
 fi
 
 #Input To Domain
-cat > /etc/v2ray/domain << END
+cat > /etc/xray/domain << END
 $domainbaru
 END
 
