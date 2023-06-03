@@ -1,17 +1,9 @@
 #!/bin/bash
-
-read -p "Input New Domain : " yourdomain
-
-#Validate
-if [[ $yourdomain == "" ]]; then
-echo "Please Input New Domain"
-exit 1
-fi
-
-#Input To Domain
-cat > /etc/xray/domain << END
-$domainbaru
-END
-
-clear 
-echo "Success added your domain for host"
+# Getting
+MYIP=$(wget -qO- ipinfo.io/ip);
+clear
+read -rp "Input New Domain : " -e domain
+echo "IP=$domain" >>/var/lib/premium-script/ipvps.conf
+rm -rf /etc/xray/domain
+echo $domain > /etc/xray/domain
+cert.sh
